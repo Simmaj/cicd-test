@@ -1,9 +1,13 @@
+on:
+  push:
+    branches: [ Staging ]
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     ....
-     ....
+    
       - name: Karate DSL Test Reports
         uses: actions/upload-artifact@v2
         if: ${{ always() }}
